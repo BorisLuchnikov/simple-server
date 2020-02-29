@@ -1,0 +1,33 @@
+spring:
+  datasource:
+    platform: postgresql
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/ss
+    username: ss
+    password: gi454acDsJ
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        temp:
+          use_jdbc_metadata_defaults: false
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: false
+
+---
+
+spring:
+  profiles: test
+
+---
+
+spring:
+  profiles: demo
+
+---
+
+spring:
+  profiles: heroku
+  datasource:
+    url: ${JDBC_DATABASE_URL}

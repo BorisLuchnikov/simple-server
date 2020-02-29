@@ -1,0 +1,7 @@
+package com.bl.simpleserver.repository;
+
+import com.bl.simpleserver.entity.Record;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface RecordRepository extends JpaRepository<Record, Long> {
+}

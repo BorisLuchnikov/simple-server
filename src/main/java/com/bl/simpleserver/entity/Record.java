@@ -1,0 +1,31 @@
+package com.bl.simpleserver.entity;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import java.time.LocalDateTime;
+
+@Entity
+@Table(name = "ss_record")
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+public class Record {
+
+    @Id
+    @Column(name = "id")
+    private Long id;
+
+    @Column(name = "date_time")
+    private LocalDateTime dateTime;
+
+    @Column(name = "value")
+    private String value;
+}
