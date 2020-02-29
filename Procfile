@@ -1,1 +1,1 @@
-web: java -jar target/next-trip-telegram-bot-impl.jar -Xmx256m -Dspring.profiles.active=heroku -Duser.timezone=Europe/Moscow -Dserver.port=$PORT
+web: java -jar target/simple-server.jar -Xmx256m -Dspring.profiles.active=heroku -Duser.timezone=Europe/Moscow -Dserver.port=$PORT
