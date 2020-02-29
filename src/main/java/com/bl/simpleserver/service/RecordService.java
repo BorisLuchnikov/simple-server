@@ -21,7 +21,7 @@ public class RecordService {
     private final RecordRepository recordRepository;
 
     public List<RecordDto> getPageRecords() {
-        return recordRepository.findAll(PageRequest.of(0, 10, Sort.by("id")))
+        return recordRepository.findAll(PageRequest.of(0, 10, Sort.by(Sort.Direction.DESC, "id")))
                 .get()
                 .map(r -> new RecordDto(r.getId(), r.getDateTime(), r.getValue()))
                 .collect(Collectors.toList());
