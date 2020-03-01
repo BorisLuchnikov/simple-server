@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -39,7 +40,7 @@ public class RecordService {
         return recordRepository.findAll(PageRequest.of(0, 100, Sort.by(Sort.Direction.DESC, "dateTime")))
                 .get()
                 .map(r -> new RecordDto(r.getId(), r.getDateTime(), r.getName(), r.getValue()))
-                .sorted(Collections.reverseOrder())
+                .sorted(Comparator.comparingLong(RecordDto::getId))
                 .collect(Collectors.toList());
     }
 
