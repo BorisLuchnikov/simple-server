@@ -1,6 +1,5 @@
 package com.bl.simpleserver.resource;
 
-import com.bl.simpleserver.dto.ChartDataDto;
 import com.bl.simpleserver.dto.RecordDto;
 import com.bl.simpleserver.service.RecordService;
 import lombok.RequiredArgsConstructor;
@@ -12,15 +11,9 @@ import java.util.List;
 @Slf4j
 @RestController
 @RequiredArgsConstructor
-public class ApiController implements ApiResource {
+public class RecordApiController implements RecordApiResource {
 
     private final RecordService recordService;
-
-    @Override
-    public ChartDataDto getChartData() {
-        log.info("start getting chart data");
-        return recordService.getChartDataDto();
-    }
 
     @Override
     public List<RecordDto> getRecords() {

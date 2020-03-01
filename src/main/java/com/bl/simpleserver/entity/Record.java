@@ -23,12 +23,12 @@ public class Record {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
     private Long id;
 
     @Column(name = "date_time")
     private LocalDateTime dateTime;
 
-    @Column(name = "value")
+    private String name;
+
     private String value;
 }

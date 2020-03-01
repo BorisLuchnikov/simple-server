@@ -17,5 +17,6 @@ public class RecordDto {
     private Long id;
     @JsonProperty("date_time")
     private LocalDateTime dateTime;
+    private String name;
     private String value;
 }
