@@ -19,7 +19,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
-        <postgresql.version>42.2.5</postgresql.version>
+        <postgresql.version>42.2.25</postgresql.version>
         <!--test-->
         <testcontainers.postgresql.version>1.11.2</testcontainers.postgresql.version>
         <junit-jupiter.version>5.3.2</junit-jupiter.version>
